@@ -49,25 +49,7 @@ RUN apt-get update && apt-get install -y libleptonica-dev \
 
 # Get language data.
 RUN apt-get install -y \
-    tesseract-ocr-osd \
-    tesseract-ocr-equ \
-    tesseract-ocr-ara \
-    tesseract-ocr-deu \
-    tesseract-ocr-fra \
-    tesseract-ocr-heb \
-    tesseract-ocr-hin \
-    tesseract-ocr-ita \
-    tesseract-ocr-jpn \
-    tesseract-ocr-kor \
-    tesseract-ocr-pol \
-    tesseract-ocr-por \
-    tesseract-ocr-rus \
     tesseract-ocr-spa \
-    tesseract-ocr-tha \
-    tesseract-ocr-tur \
-    tesseract-ocr-vie \
-    tesseract-ocr-chi-sim \
-    tesseract-ocr-chi-tra \
     tesseract-ocr-eng
     # add more if needed
 
