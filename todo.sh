@@ -97,7 +97,7 @@ cd ~/workspace
 # Python Opencv lib
 sudo pip install opencv-python
 
-# Tesseract wrapper
-export CXXFLAGS='-std=c++11' &&\
-export CFLAGS='-std=c++11' && \
-sudo pip install tesserocr
+# # Tesseract wrapper
+# export CXXFLAGS='-std=c++11' &&\
+# export CFLAGS='-std=c++11' && \
+# sudo pip install tesserocr
