@@ -53,6 +53,9 @@ RUN apt-get install -y \
     tesseract-ocr-eng
     # add more if needed
 
+RUN export CFLAGS='-std=c++11' \
+    pip install tesserocr
+
 RUN apt-get -y clean all && \
     rm -rf /var/lib/apt/lists/*
 
