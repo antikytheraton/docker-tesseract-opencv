@@ -35,7 +35,8 @@ sudo pip install numpy && \
 sudo pip install pandas && \
 sudo pip install scipy && \
 sudo pip install scikit-learn && \
-sudo pip install python-magic
+sudo pip install python-magic && \
+sudo pip install flask
 
 # lib for tesseract
 sudo apt-get update && \
@@ -84,12 +85,13 @@ wget https://github.com/Itseez/opencv/archive/3.3.1.zip -O opencv.zip \
         -DPYTHON_INCLUDE_DIR=$(python3.6 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
         -DPYTHON_PACKAGES_PATH=$(python3.6 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") .. \
     && sudo make install \
-    && rm ~/opencv.zip \
+    && rm get-pip.py \
+    && sudo rm -r ~/opencv-3.3.1 \
+    && sudo rm -r ~/opencv_contrib-3.3.1 \
     && rm ~/opencv_contrib.zip \
-    && rm -r ~/opencv-3.3.1 \
-    && rm -r ~/opencv_contrib-3.3.1
+    && rm ~/opencv.zip
 
-mkdir ~/workspace
+mkdir ~/workspace && \
 cd ~/workspace
 
 # Python Opencv lib
@@ -97,5 +99,5 @@ sudo pip install opencv-python
 
 # Tesseract wrapper
 export CXXFLAGS='-std=c++11' &&\
-    export CFLAGS='-std=c++11' && \
-    sudo pip install tesserocr
+export CFLAGS='-std=c++11' && \
+sudo pip install tesserocr
